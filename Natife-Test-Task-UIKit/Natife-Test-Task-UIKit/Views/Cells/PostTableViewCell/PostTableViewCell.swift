@@ -106,8 +106,7 @@ final class PostTableViewCell: UITableViewCell {
     }
     
     func setState(with state: PostCellStateModel) {
-        isCellExpanded = state.isExpanded == 0 ? true : false
-        postDescriptionLabel.numberOfLines = state.isExpanded
+        isCellExpanded = state.isExpanded
         expandButton.isHidden = state.shouldHideButton
     }
     

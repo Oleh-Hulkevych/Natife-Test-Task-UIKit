@@ -8,6 +8,6 @@
 import Foundation
 
 struct PostCellStateModel {
-    let isExpanded: Int
+    let isExpanded: Bool
     let shouldHideButton: Bool
 }

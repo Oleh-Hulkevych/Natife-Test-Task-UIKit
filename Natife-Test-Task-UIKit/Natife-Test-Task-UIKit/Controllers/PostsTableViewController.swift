@@ -73,7 +73,7 @@ final class PostsTableViewController: UITableViewController {
         cell.delegate = self
         let post = posts[indexPath.row]
         let numberOfLines: Int = 2
-        let expanded = expandedCellsIDs.contains(post.postId) ? 0 : numberOfLines
+        let expanded = expandedCellsIDs.contains(post.postId)
         let buttonHiden = hideElementsBasedOnTextLines(of: numberOfLines, of: post.previewText, withWidth: tableView.bounds.width)
         let state = PostCellStateModel(isExpanded: expanded, shouldHideButton: buttonHiden)
         cell.setPost(with: post, isLiked: likeManager.isLikedPost(id: post.postId))
